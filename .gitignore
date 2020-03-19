@@ -61,4 +61,4 @@ typings/
 # next.js build output
 .next
 
-config/myLocal.json
+./config/myLocal.json
