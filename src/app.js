@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 
-const product = require("./routes/product.route");
+const todo = require("./routes/todo.route");
 const db = require("./database");
 const app = express();
 
@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(morgan('combined'));
 
 
-app.use("/products", product);
+app.use("/api/v1/todoes", todo);
 
 app.listen(port, () => {
     console.log("server is running on port: ", port);
